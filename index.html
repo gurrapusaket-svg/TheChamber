@@ -576,6 +576,65 @@
     font-weight: 700;
   }
 
+  /* ── PARTNERS ── */
+  .partners-section {
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+    padding: 72px 24px;
+    text-align: center;
+    max-width: none;
+  }
+
+  .partners-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .partners-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    margin-top: 48px;
+  }
+
+  .partner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .partner-item img {
+    max-height: 80px;
+    width: auto;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+  }
+
+  .partner-item img:hover { opacity: 1; }
+
+  .partner-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .partner-divider {
+    width: 1px;
+    height: 80px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .partner-divider { display: none; }
+    .partners-logos { gap: 48px; }
+  }
+
   /* ── FOOTER ── */
   footer {
     border-top: 0.5px solid var(--border);
@@ -815,6 +874,42 @@
     <p style="margin-top: 16px; font-size: 13px; color: var(--muted);">
       [INSERT DATES HERE] · Spots limited
     </p>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners-section">
+  <div class="partners-inner">
+    <p class="section-label reveal">Our Partners</p>
+    <h2 class="section-title reveal">Backed by those who believe in the mission</h2>
+
+    <div class="partners-logos">
+
+      <!-- VENUE PARTNER -->
+      <div class="partner-item reveal">
+        <!-- NTMC SQUARE LOGO (no text): replace NTMC_SQUARE_LOGO.png with your actual filename -->
+        <img src="NTMC_SQUARE_LOGO.png" alt="North Texas Medical Clinic">
+        <span class="partner-label">Venue Partner</span>
+        <p style="font-size: 13px; color: var(--muted); max-width: 220px; text-align: center; line-height: 1.6; margin-top: 4px;">
+          North Texas Medical Clinic is generously providing the venue for all camp sessions.
+        </p>
+      </div>
+
+      <div class="partner-divider reveal"></div>
+
+      <!-- PRINCIPAL PARTNER -->
+      <div class="partner-item reveal">
+        <!-- PRAGATHAM HORIZONTAL LOGO (with text): replace PRAGATHAM_HORIZONTAL_LOGO.png with your actual filename -->
+        <a href="https://pragatham.org" target="_blank" rel="noopener">
+          <img src="PRAGATHAM_HORIZONTAL_LOGO.png" alt="Pragatham">
+        </a>
+        <span class="partner-label">Principal Partner</span>
+        <p style="font-size: 13px; color: var(--muted); max-width: 240px; text-align: center; line-height: 1.6; margin-top: 4px;">
+          100% of registration fees are donated to <a href="https://pragatham.org" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: none;">Pragatham</a> — a nonprofit empowering students with speech disorders through debate and public speaking.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
